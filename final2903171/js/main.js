@@ -21,17 +21,17 @@ window.onload=function(){
   };
     var datos = [];
 
-document.getElementById("registrar").addEventListener("click",function(){
-  var nombre = document.getElementById('nombre').value;
-  var apellido = document.getElementById('apellido').value;
-  var correo = document.getElementById('correo').value;
-  var contraseña = document.getElementById('contraseña').value;
+document.getElementById("registrar").addEventListener("click",function()){
+  var nombre = document.getElementById("nombre").value;
+  var apellido = document.getElementById("apellido").value;
+  var correo = document.getElementById("correo").value;
+  var contraseña = document.getElementById("contraseña").value;
 
     if(name == 0 || apellido == 0 || correo == 0 || contraseña == 0){
       alert("Este campo debe ser llenado");
     };
     else if(name != name.match(/^[a-zA-Z]*$/) || apellido != name.match(/^[a-zA-Z]*$/) ){
-      alert("Este campo solo admite letras")
+      alert("Este campo solo admite letras")b
     };
     if(correo != correo.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/)){
       alert("Este campo debe ser llenado correctamente!")
@@ -39,4 +39,8 @@ document.getElementById("registrar").addEventListener("click",function(){
     window.location = "datos.html";
     }
 
-  
+document.getElementById("contenedor").addEventListener("click",function()){
+  function print(){
+    imprimir.innerHTML = "Nombre: " +  nombre.value + "Apellido: " + apellido.value + "Correo: " + correo.value  + "Contraseña:"  + contraseña.value;
+}
+}
